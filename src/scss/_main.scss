@@ -1,0 +1,50 @@
+.main {
+  .slide-itens {
+    .slide-1 {
+      @include slide(url(../src/img/banner-01.jpg));
+    }
+    .slide-2 {
+      @include slide(url(../src/img/banner-02.jpg));
+    }
+    .slide-3 {
+      @include slide(url(../src/img/banner-03.jpg));
+    }
+    .info-slide {
+      @include d("m") {
+        padding-top: 150px;
+        p {
+          font-size: 3rem;
+          line-height: 60px;
+        }
+      }
+      padding: 10% 0px 0px 20%;
+      animation: show-banner 0.5s forwards;
+    }
+    .tab-content {
+      display: none;
+      &.ativo {
+        display: block;
+      }
+    }
+  }
+  .btn-banner {
+    position: absolute;
+    @include displayFlex;
+    justify-content: end;
+    margin: -100px 45%;
+    p {
+      @include d("m") {
+        margin-left: -10px;
+      }
+      cursor: pointer;
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        background-color: $cor-secundaria;
+      }
+    }
+  }
+}

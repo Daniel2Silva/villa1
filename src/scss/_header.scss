@@ -1,0 +1,91 @@
+@import "./utilitarios/utilitarios";
+
+.header {
+  @include max-width;
+  .header-top {
+    @include flexbox(center, space-between);
+    padding: 20px 0;
+    @include d("t") {
+      display: none;
+    }
+    @include d("m") {
+      display: none;
+    }
+    &::after {
+      content: "";
+      top: 60px;
+      left: 0;
+      position: absolute;
+      background-color: $cor-4;
+      display: block;
+      width: 100vw;
+      height: 0.1px;
+    }
+  }
+  .info-header-top {
+    @include displayFlex;
+    @include font-1(16);
+    font-weight: 400;
+    color: $cor-3;
+  }
+  .redes-sociais {
+    @include displayFlex;
+    li {
+      width: 25px;
+      height: 25px;
+      background-color: $cor-4;
+      text-align: center;
+      border-radius: 50%;
+    }
+  }
+  .header-bottom {
+    @include flexbox(center, space-between);
+    padding: 30px 0;
+    @include d("t") {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+    }
+    @include d("m") {
+      padding: 20px 0px;
+    }
+  }
+
+  .logo {
+    a {
+      @include font-1(32);
+      color: $cor-primaria;
+      letter-spacing: 2px;
+    }
+  }
+  .header-bottom-right {
+    @include displayFlex;
+    @include d("m") {
+      display: none;
+    }
+  }
+  .menu {
+    @include displayFlex;
+    gap: 60px;
+    li {
+      a {
+        @include font-1(16);
+        color: $cor-primaria;
+        transition: 0.4s;
+        padding: 5px;
+
+        &:hover {
+          color: $cor-secundaria;
+          transition: 0.4s;
+        }
+      }
+    }
+  }
+
+  .btn-mobile {
+    display: none;
+    @include d("m") {
+      display: block;
+    }
+  }
+}
