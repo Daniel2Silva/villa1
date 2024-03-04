@@ -1,50 +1,123 @@
 .main {
-  .slide-itens {
-    .slide-1 {
-      @include slide(url(../src/img/banner-01.jpg));
-    }
-    .slide-2 {
-      @include slide(url(../src/img/banner-02.jpg));
-    }
-    .slide-3 {
-      @include slide(url(../src/img/banner-03.jpg));
-    }
-    .info-slide {
-      @include d("m") {
-        padding-top: 150px;
-        p {
-          font-size: 3rem;
-          line-height: 60px;
+  .slide {
+    margin-bottom: 180px;
+    .slide-itens {
+      .slide-1 {
+        @include slide(url(../src/img/banner-01.jpg));
+      }
+      .slide-2 {
+        @include slide(url(../src/img/banner-02.jpg));
+      }
+      .slide-3 {
+        @include slide(url(../src/img/banner-03.jpg));
+      }
+      .info-slide {
+        @include d("m") {
+          padding-top: 200px;
+          p {
+            font-size: 3.125rem;
+            line-height: 60px;
+          }
+        }
+        padding: 10% 0px 0px 20%;
+        animation: show-banner 0.9s forwards;
+      }
+      .tab-content {
+        display: none;
+        &.ativo {
+          display: block;
         }
       }
-      padding: 10% 0px 0px 20%;
-      animation: show-banner 0.5s forwards;
-    }
-    .tab-content {
-      display: none;
-      &.ativo {
-        display: block;
-      }
     }
   }
-  .btn-banner {
-    position: absolute;
-    @include displayFlex;
-    justify-content: end;
-    margin: -100px 45%;
-    p {
-      @include d("m") {
-        margin-left: -10px;
+  .conteudo-home {
+    @include max-width;
+    @include flexbox(center, center);
+    .conteudo-home-itens {
+      @include d('t'){
+        flex-direction: column;
       }
-      cursor: pointer;
-      &::after {
-        content: "";
-        display: inline-block;
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        background-color: $cor-secundaria;
+      @include d('m'){
+        flex-direction: column;
+      }
+      @include displayFlex;
+      @include flexbox(start, center);
+      gap: 40px;
+      .accordion {
+        width: 500px;
+        @include d('m'){
+          width: 350px;
+        }
       }
     }
+    margin-bottom: 400px;
   }
+}
+
+.info-feature {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  -webkit-box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.21);
+  -moz-box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.21);
+  box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.21);
+  border-radius: 12px;
+}
+
+.info-feature-itens {
+  @include d('m'){
+    width: 350px;
+  }
+  width: 260px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 45px;
+  gap: 20px;
+  align-items: center;
+}
+
+.accordion h2 {
+  font-size: 3rem;
+}
+.accordion {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 80px;
+}
+
+.accordion-feature {
+  @include d('m'){
+    width: 350px;
+  }
+  width: 400px;
+  padding: 0px 15px;
+  background-color: #fafafa;
+  border-radius: 12px;
+  dt {
+    padding: 10px 0px;
+    font-size: 1.125rem;
+    font-weight: bold;
+    &::after{
+      margin-top: 5px;
+      display: block;
+      content: '';
+      height: 1px;
+      background-color: black;
+    }
+  }
+}
+
+img{
+  border-radius: 12px;
+}
+
+[data-accordion] dd{
+  display: none;
+}
+
+[data-accordion] dd.ativo{
+  display: block;
 }

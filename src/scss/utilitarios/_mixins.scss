@@ -94,6 +94,9 @@ $font-2: "Helvetica";
     @include font-1(64);
     color: $cor-5;
   }
+  @include d("m") {
+    height: 95vh;
+  }
 }
 
 
@@ -108,4 +111,15 @@ $font-2: "Helvetica";
         opacity: 1;
         transform: translate3d(0,0,0);
     }
+}
+
+@keyframes show-down{
+  from{
+    opacity: 0;
+    transform: translate3d(60px,0,0);
+  }
+  to{
+    opacity: 1;
+    transform: translate3d(0,0,0);
+  }
 }

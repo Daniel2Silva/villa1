@@ -27,15 +27,23 @@
     @include font-1(16);
     font-weight: 400;
     color: $cor-3;
+    span {
+      color: $cor-secundaria;
+    }
   }
   .redes-sociais {
     @include displayFlex;
-    li {
-      width: 25px;
-      height: 25px;
+    a {
+      color: $cor-5;
+      font-size: 20px;
       background-color: $cor-4;
-      text-align: center;
+      padding: 5px 7px;
       border-radius: 50%;
+      transition: 0.3s;
+      &:hover {
+        transition: 0.3s;
+        background-color: $cor-secundaria;
+      }
     }
   }
   .header-bottom {
@@ -60,11 +68,23 @@
   }
   .header-bottom-right {
     @include displayFlex;
+  }
+  .menu {
     @include d("m") {
       display: none;
     }
-  }
-  .menu {
+    &.ativo {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      top: 58px;
+      background-color: $cor-5;
+      padding: 50px;
+      z-index: 2000;
+      border-radius: 12px;
+      animation: show-down forwards 0.2s;
+    }
     @include displayFlex;
     gap: 60px;
     li {
