@@ -1,0 +1,32 @@
+[
+  {
+    "tipo": "luxo",
+    "preco": "354",
+    "endedereco": "rj"
+  },
+  {
+    "tipo": "app",
+    "preco": "3000",
+    "endedereco": "sp"
+  },
+  {
+    "tipo": "luxo",
+    "preco": "354",
+    "endedereco": "rj"
+  },
+  {
+    "tipo": "luxo",
+    "preco": "354",
+    "endedereco": "rj"
+  },
+  {
+    "tipo": "app",
+    "preco": "3000",
+    "endedereco": "sp"
+  },
+  {
+    "tipo": "luxo",
+    "preco": "354",
+    "endedereco": "rj"
+  }
+]

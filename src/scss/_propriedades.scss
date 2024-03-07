@@ -1,5 +1,6 @@
 .propriedades{
     .propriedades-banner{
+        margin-bottom: 80px;
         background-color: aquamarine;
         height: 300px;
         @include flexbox(center, center)
@@ -7,10 +8,44 @@
 }
 
 
-.numeros{
-    display: flex;
-    align-items: end;
-    justify-content: center;
-    gap: 40px;
-    font-size: 2rem;
+
+
+
+.section-propriedades{
+    @include max-width;
+    margin-bottom: 200px;
+    .propriedades-lista{
+        @include flexbox(center,center);
+        gap: 40px;
+        margin-bottom: 60px;
+    }
+    .propriedades-itens{
+        .propriedades-item{
+            padding: 30px;
+            background-color: #fafafa;;
+            border-radius: 12px;
+        }
+        @include flexbox(center,center);
+        gap: 20px;
+        flex-wrap: wrap;
+        img{
+            width: 300px;
+            height: 200px;
+            background-color: black;
+            border-radius: 12px;
+        }
+        .tipo-preco{
+            padding: 20px 0;
+            @include flexbox(center, space-between)
+        }
+        .endereco{
+            padding: 20px 0;
+        }
+        .propriedades-item-info{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
 }
+
+

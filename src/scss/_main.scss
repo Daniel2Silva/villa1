@@ -33,24 +33,68 @@
   .conteudo-home {
     @include max-width;
     @include flexbox(center, center);
+    flex-wrap: wrap;
     .conteudo-home-itens {
-      @include d('t'){
+      @include d("m") {
         flex-direction: column;
+        margin-left: 8px;
       }
-      @include d('m'){
+      @include d("t") {
         flex-direction: column;
+        margin-left: 8px;
       }
       @include displayFlex;
       @include flexbox(start, center);
       gap: 40px;
       .accordion {
-        width: 500px;
-        @include d('m'){
+        width: 460px;
+        @include d("m") {
           width: 350px;
         }
       }
     }
     margin-bottom: 400px;
+  }
+}
+
+.section-video {
+  margin-bottom: 700px;
+  background-image: url(/src/img/video-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  @include d("m") {
+    height: 650px;
+  }
+  .container-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .video-grid {
+      h3 {
+        color: white;
+        text-align: center;
+        padding: 120px 0;
+        @include font-1(48);
+        font-weight: 800;
+      }
+    }
+    @include max-width;
+    .video {
+      width: 930px;
+      height: 415px;
+      img {
+        border-radius: 12px;
+      }
+      @include d("t") {
+        width: 700px;
+      }
+      @include d("m") {
+        width: 350px;
+        height: 200px;
+      }
+    }
   }
 }
 
@@ -65,17 +109,18 @@
 }
 
 .info-feature-itens {
-  @include d('m'){
+  @include d("m") {
     width: 350px;
+  }
+  @include d("t") {
+    width: 460px;
   }
   width: 260px;
   height: 130px;
   display: flex;
   align-items: center;
-  justify-content: start;
   padding-left: 45px;
   gap: 20px;
-  align-items: center;
 }
 
 .accordion h2 {
@@ -85,39 +130,106 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 80px;
+  gap: 100px;
 }
 
 .accordion-feature {
-  @include d('m'){
+  @include d("m") {
     width: 350px;
   }
-  width: 400px;
+  width: 450px;
   padding: 0px 15px;
   background-color: #fafafa;
   border-radius: 12px;
   dt {
-    padding: 10px 0px;
+    padding: 15px 0px;
     font-size: 1.125rem;
     font-weight: bold;
-    &::after{
-      margin-top: 5px;
+    &::after {
+      margin-top: 10px;
       display: block;
-      content: '';
-      height: 1px;
-      background-color: black;
+      content: "";
+      height: 0.5px;
+      background-color: $cor-3;
     }
   }
 }
 
-img{
-  border-radius: 12px;
+[data-accordion] dt.ativo {
+  color: $cor-secundaria;
 }
 
-[data-accordion] dd{
+[data-accordion] dd {
   display: none;
 }
 
-[data-accordion] dd.ativo{
+[data-accordion] dd.ativo {
   display: block;
+  animation: show-down 0.3s forwards;
+}
+
+.img-accordion {
+  position: relative;
+  width: 300px;
+  @include d("m") {
+    margin-bottom: 60px;
+    margin-left: 50px;
+  }
+}
+
+.fotoi {
+  display: inline-block;
+  padding: 30px;
+  position: absolute;
+  border-radius: 50%;
+  background-color: $cor-secundaria;
+  top: 350px;
+  left: -40px;
+  @include d("m") {
+    top: 370px;
+  }
+}
+
+.titulo-accordion span {
+  color: red;
+}
+
+.section-melhor-negocio {
+  .info-melhor-negocio {
+    @include flexbox(center, space-between);
+    .lista-negocio {
+      @include displayFlex;
+    }
+  }
+  @include max-width;
+  .melhor-negocio-item {
+    margin-bottom: 200px;
+    .lista-info {
+      -webkit-box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.21);
+      -moz-box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.21);
+      box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.21);
+      border-radius: 12px;
+      background-color: bisque;
+      padding: 25px 0;
+      width: 261px;
+      height: 350px;
+      @include flexbox(center, space-between);
+      flex-direction: column;
+    }
+    @include flexbox(flex-start, space-between);
+    flex-wrap: wrap;
+    .img-negocio {
+      width: 460px;
+      @include d("m") {
+        width: 400px;
+      }
+    }
+    .negocio-texto {
+      width: 261px;
+    }
+    display: none;
+  }
+  .ativo {
+    display: flex;
+  }
 }

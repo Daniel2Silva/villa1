@@ -2,6 +2,9 @@
 
 .header {
   @include max-width;
+  @include d('m'){
+    padding: 0 20px;
+  }
   .header-top {
     @include flexbox(center, space-between);
     padding: 20px 0;
@@ -68,40 +71,43 @@
   }
   .header-bottom-right {
     @include displayFlex;
-  }
-  .menu {
-    @include d("m") {
-      display: none;
-    }
-    &.ativo {
-      display: flex;
-      flex-direction: column;
-      position: absolute;
-      right: 0;
-      top: 58px;
-      background-color: $cor-5;
-      padding: 50px;
-      z-index: 2000;
-      border-radius: 12px;
-      animation: show-down forwards 0.2s;
-    }
-    @include displayFlex;
-    gap: 60px;
-    li {
-      a {
-        @include font-1(16);
-        color: $cor-primaria;
-        transition: 0.4s;
-        padding: 5px;
-
-        &:hover {
-          color: $cor-secundaria;
+    .menu {
+      @include d("m") {
+        display: none;
+      }
+      &.ativo {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+        top: 58px;
+        background-color: $cor-5;
+        padding: 50px;
+        z-index: 2000;
+        border-radius: 12px;
+        animation: show-down forwards 0.2s;
+      }
+      @include displayFlex;
+      gap: 60px;
+      li {
+        a {
+          @include font-1(16);
+          color: $cor-primaria;
           transition: 0.4s;
+          padding: 5px;
+  
+          &:hover {
+            color: $cor-secundaria;
+            transition: 0.4s;
+          }
         }
       }
     }
   }
 
+  .btn-header{
+    display: none;
+  }
   .btn-mobile {
     display: none;
     @include d("m") {

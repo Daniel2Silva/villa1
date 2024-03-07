@@ -19,7 +19,38 @@ function createElement(pessoa){
 
 /* alterarNumeros('./js/txt.json') */
 
+async function gerarCasas(link) {
+  const response = await fetch(link);
+  const casaResponse = await response.json();
+  const divPropriedades = document.querySelector('.propriedades-itens')
+  casaResponse.forEach((casa) => {
+    const articleCasa = criarElemento(casa)
+    divPropriedades.appendChild(articleCasa)
+  })
+}
 
-const accordion = document.querySelector('[data-accordion] dt')
+function criarElemento(casa) {
+  const div = document.createElement("article");
+  div.classList.add(".propriedades-item");
+  div.innerHTML = `
+  <article class="propriedades-item">
+            <img src="/src/img/banner-02.jpg" alt="">
+            <div class="tipo-preco">
+              <span>${casa.tipo}</span>
+              <span>${casa.preco}</span>
+            </div>
+            <h1 class="endereco">${casa.endereco}</h1>
+            <ul class="propriedades-item-info">
+              <li>quato</li>
+              <li>area</li>
+              <li>parking</li>
+              <li>banheiro</li>
+              <li>Florida</li>
+            </ul>
+            <button>escolher</button>
+          </article>
+  `
+  return div
+}
 
-console.log(accordion)
+gerarCasas("./js/casa.json");
