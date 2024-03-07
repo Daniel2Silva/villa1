@@ -56,6 +56,12 @@ img {
   }
 }
 
+@media only screen and (max-width: 767px) {
+  .header {
+    padding: 0 20px;
+  }
+}
+
 .header .header-top {
   display: flex;
   align-items: center;
@@ -89,7 +95,6 @@ img {
 .header .info-header-top {
   align-items: center;
   display: flex;
-  gap: 20px;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
   font-weight: 500;
@@ -104,7 +109,6 @@ img {
 .header .redes-sociais {
   align-items: center;
   display: flex;
-  gap: 20px;
 }
 
 .header .redes-sociais a {
@@ -152,13 +156,11 @@ img {
 .header .header-bottom-right {
   align-items: center;
   display: flex;
-  gap: 20px;
 }
 
 .header .header-bottom-right .menu {
   align-items: center;
   display: flex;
-  gap: 20px;
   gap: 60px;
 }
 
@@ -355,13 +357,18 @@ img {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 400px;
+  margin-bottom: 80px;
+}
+
+@media only screen and (max-width: 767px) {
+  .main .conteudo-home {
+    padding: 0 20px;
+  }
 }
 
 .main .conteudo-home .conteudo-home-itens {
   align-items: center;
   display: flex;
-  gap: 20px;
   display: flex;
   align-items: start;
   justify-content: center;
@@ -393,8 +400,8 @@ img {
 }
 
 .section-video {
-  margin-bottom: 700px;
-  background-image: url(../img/video-bg.jpg);
+  margin-bottom: 80px;
+  background-image: url(../src/img/video-bg.jpg);
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -425,6 +432,12 @@ img {
   font-weight: 800;
 }
 
+@media only screen and (max-width: 767px) {
+  .section-video .container-video {
+    padding: 0 20px;
+  }
+}
+
 .section-video .container-video .video {
   width: 930px;
   height: 415px;
@@ -444,6 +457,22 @@ img {
   .section-video .container-video .video {
     width: 350px;
     height: 200px;
+  }
+}
+
+.numeros {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
+}
+
+@media only screen and (max-width: 767px) {
+  .numeros {
+    padding: 0 20px;
   }
 }
 
@@ -576,15 +605,20 @@ img {
 .section-melhor-negocio .info-melhor-negocio .lista-negocio {
   align-items: center;
   display: flex;
-  gap: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  .section-melhor-negocio {
+    padding: 0 20px;
+  }
 }
 
 .section-melhor-negocio .melhor-negocio-item {
   margin-bottom: 200px;
+  gap: 20px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
-  flex-wrap: wrap;
   display: none;
 }
 
@@ -593,7 +627,6 @@ img {
   -moz-box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.21);
   box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.21);
   border-radius: 12px;
-  background-color: bisque;
   padding: 25px 0;
   width: 261px;
   height: 350px;
@@ -603,18 +636,44 @@ img {
   flex-direction: column;
 }
 
+@media only screen and (max-width: 767px) {
+  .section-melhor-negocio .melhor-negocio-item .lista-info {
+    width: 350px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .section-melhor-negocio .melhor-negocio-item .lista-info {
+    width: 460px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .section-melhor-negocio .melhor-negocio-item {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .section-melhor-negocio .melhor-negocio-item {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
 .section-melhor-negocio .melhor-negocio-item .img-negocio {
   width: 460px;
 }
 
-@media only screen and (max-width: 767px) {
-  .section-melhor-negocio .melhor-negocio-item .img-negocio {
-    width: 400px;
-  }
-}
-
 .section-melhor-negocio .melhor-negocio-item .negocio-texto {
   width: 261px;
+}
+
+@media only screen and (max-width: 767px) {
+  .section-melhor-negocio .melhor-negocio-item .negocio-texto {
+    width: 350px;
+  }
 }
 
 .section-melhor-negocio .ativo {
@@ -635,6 +694,12 @@ img {
   margin: 0 auto;
   padding: 0 60px;
   margin-bottom: 200px;
+}
+
+@media only screen and (max-width: 767px) {
+  .section-propriedades {
+    padding: 0 20px;
+  }
 }
 
 .section-propriedades .propriedades-lista {

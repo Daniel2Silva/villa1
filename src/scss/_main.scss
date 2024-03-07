@@ -53,13 +53,13 @@
         }
       }
     }
-    margin-bottom: 400px;
+    margin-bottom: 80px;
   }
 }
 
 .section-video {
-  margin-bottom: 700px;
-  background-image: url(../img/video-bg.jpg);
+  margin-bottom: 80px;
+  background-image: url(../src/img/video-bg.jpg);
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -96,6 +96,14 @@
       }
     }
   }
+}
+
+.numeros{
+  @include max-width;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 80px;
 }
 
 .info-feature {
@@ -209,23 +217,36 @@
       -moz-box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.21);
       box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.21);
       border-radius: 12px;
-      background-color: bisque;
       padding: 25px 0;
       width: 261px;
       height: 350px;
       @include flexbox(center, space-between);
       flex-direction: column;
+      @include d('m'){
+        width: 350px;
+      }
+      @include d("t") {
+        width: 460px;
+      }
     }
+    gap: 20px;
     @include flexbox(flex-start, space-between);
-    flex-wrap: wrap;
+    @include d('m'){
+      flex-direction: column;
+      align-items: center;
+    }
+    @include d('t'){
+      flex-direction: column;
+      align-items: center;
+    }
     .img-negocio {
       width: 460px;
-      @include d("m") {
-        width: 400px;
-      }
     }
     .negocio-texto {
       width: 261px;
+      @include d('m'){
+        width: 350px;
+      }
     }
     display: none;
   }
