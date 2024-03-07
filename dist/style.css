@@ -400,7 +400,7 @@ img {
 }
 
 .section-video {
-  margin-bottom: 80px;
+  margin-bottom: 350px;
   background-image: url(../src/img/video-bg.jpg);
   background-position: center;
   background-size: cover;
@@ -410,6 +410,14 @@ img {
 @media only screen and (max-width: 767px) {
   .section-video {
     height: 650px;
+    margin-bottom: 100px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .section-video {
+    height: 650px;
+    margin-bottom: 200px;
   }
 }
 
@@ -426,7 +434,7 @@ img {
 .section-video .container-video .video-grid h3 {
   color: white;
   text-align: center;
-  padding: 120px 0;
+  padding: 100px 0;
   font-family: "Roboto", sans-serif;
   font-size: 3rem;
   font-weight: 800;
@@ -467,12 +475,24 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
 }
 
 @media only screen and (max-width: 767px) {
   .numeros {
     padding: 0 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .numeros {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .numeros {
+    flex-direction: column;
   }
 }
 
@@ -597,14 +617,55 @@ img {
 }
 
 .section-melhor-negocio .info-melhor-negocio {
+  padding: 50px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 60px;
+}
+
+@media only screen and (max-width: 767px) {
+  .section-melhor-negocio .info-melhor-negocio {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .section-melhor-negocio .info-melhor-negocio {
+    flex-direction: column;
+  }
 }
 
 .section-melhor-negocio .info-melhor-negocio .lista-negocio {
   align-items: center;
   display: flex;
+  gap: 30px;
+}
+
+@media only screen and (max-width: 767px) {
+  .section-melhor-negocio .info-melhor-negocio .lista-negocio {
+    gap: 5px;
+  }
+}
+
+.section-melhor-negocio .info-melhor-negocio .lista-negocio li {
+  font-size: 1.125rem;
+  background-color: black;
+  font-weight: 600;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  transition: .3s ease;
+}
+
+@media only screen and (max-width: 767px) {
+  .section-melhor-negocio .info-melhor-negocio .lista-negocio li {
+    font-size: 0.7rem;
+  }
+}
+
+.section-melhor-negocio .info-melhor-negocio .lista-negocio .ativo {
+  background-color: #F35525;
 }
 
 @media only screen and (max-width: 767px) {
@@ -664,6 +725,12 @@ img {
 
 .section-melhor-negocio .melhor-negocio-item .img-negocio {
   width: 460px;
+}
+
+@media only screen and (max-width: 767px) {
+  .section-melhor-negocio .melhor-negocio-item .img-negocio {
+    width: 350px;
+  }
 }
 
 .section-melhor-negocio .melhor-negocio-item .negocio-texto {

@@ -58,13 +58,18 @@
 }
 
 .section-video {
-  margin-bottom: 80px;
+  margin-bottom: 350px;
   background-image: url(../src/img/video-bg.jpg);
   background-position: center;
   background-size: cover;
   height: 100vh;
   @include d("m") {
     height: 650px;
+    margin-bottom: 100px;
+  }
+  @include d("t") {
+    height: 650px;
+    margin-bottom: 200px;
   }
   .container-video {
     display: flex;
@@ -75,7 +80,7 @@
       h3 {
         color: white;
         text-align: center;
-        padding: 120px 0;
+        padding: 100px 0;
         @include font-1(48);
         font-weight: 800;
       }
@@ -103,7 +108,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 80px;
+  margin-bottom: 120px;
+  @include d('t'){
+    flex-direction: column;
+  }
+  @include d('m'){
+    flex-direction: column;
+  }
 }
 
 .info-feature {
@@ -204,9 +215,35 @@
 
 .section-melhor-negocio {
   .info-melhor-negocio {
+    @include d('m'){
+      flex-direction: column;
+    }
+    @include d('t'){
+      flex-direction: column;
+    }
+    padding: 50px 0;
     @include flexbox(center, space-between);
+    gap: 60px;
     .lista-negocio {
       @include displayFlex;
+      gap: 30px;
+      @include d('m'){
+        gap: 5px;
+      }
+      li{
+        font-size: 1.125rem;
+        background-color: black;
+        font-weight: 600;
+        color: white;
+        padding: 15px 25px;
+        border-radius: 10px;
+        transition: .3s ease;
+        @include d('m'){
+          font-size: 0.7rem;
+        }
+      }.ativo{
+        background-color: $cor-secundaria;
+      }
     }
   }
   @include max-width;
@@ -241,6 +278,9 @@
     }
     .img-negocio {
       width: 460px;
+      @include d("m"){
+        width: 350px;
+      }
     }
     .negocio-texto {
       width: 261px;
