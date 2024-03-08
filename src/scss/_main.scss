@@ -103,17 +103,47 @@
   }
 }
 
-.numeros{
+.numeros {
   @include max-width;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   margin-bottom: 120px;
-  @include d('t'){
+  @include d("t") {
     flex-direction: column;
   }
-  @include d('m'){
+  @include d("m") {
     flex-direction: column;
+  }
+  gap: 20px;
+  div {
+    position: relative;
+    font-size: 1.125rem;
+    background-color: #ffeee9;
+    width: 270px;
+    height: 90px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    border-radius: 12px;
+    .numero {
+      font-size: 2.5rem;
+      font-family: "roboto";
+      color: $cor-secundaria;
+      font-weight: 900;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+      background-color: $cor-secundaria;
+      top: -20px;
+      right: -22px;
+    }
   }
 }
 
@@ -184,7 +214,7 @@
 
 [data-accordion] dd.ativo {
   display: block;
-  animation: show-down 0.3s forwards;
+  animation: show-down-accordion 0.3s forwards;
 }
 
 .img-accordion {
@@ -215,10 +245,10 @@
 
 .section-melhor-negocio {
   .info-melhor-negocio {
-    @include d('m'){
+    @include d("m") {
       flex-direction: column;
     }
-    @include d('t'){
+    @include d("t") {
       flex-direction: column;
     }
     padding: 50px 0;
@@ -227,21 +257,24 @@
     .lista-negocio {
       @include displayFlex;
       gap: 30px;
-      @include d('m'){
+      @include d("m") {
         gap: 5px;
       }
-      li{
+      li {
+        cursor: pointer;
         font-size: 1.125rem;
         background-color: black;
         font-weight: 600;
         color: white;
         padding: 15px 25px;
         border-radius: 10px;
-        transition: .3s ease;
-        @include d('m'){
+        transition: 0.3s ease;
+        @include font-1(16);
+        @include d("m") {
           font-size: 0.7rem;
         }
-      }.ativo{
+      }
+      .ativo {
         background-color: $cor-secundaria;
       }
     }
@@ -259,7 +292,7 @@
       height: 350px;
       @include flexbox(center, space-between);
       flex-direction: column;
-      @include d('m'){
+      @include d("m") {
         width: 350px;
       }
       @include d("t") {
@@ -268,29 +301,33 @@
     }
     gap: 20px;
     @include flexbox(flex-start, space-between);
-    @include d('m'){
+    @include d("m") {
       flex-direction: column;
       align-items: center;
     }
-    @include d('t'){
+    @include d("t") {
       flex-direction: column;
       align-items: center;
     }
     .img-negocio {
       width: 460px;
-      @include d("m"){
+      @include d("m") {
         width: 350px;
       }
     }
     .negocio-texto {
       width: 261px;
-      @include d('m'){
+      height: 457px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      @include d("m") {
         width: 350px;
       }
     }
     display: none;
-  }
-  .ativo {
+    animation: show-tab .6s forwards;
+  }.ativo{
     display: flex;
   }
 }

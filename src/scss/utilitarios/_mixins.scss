@@ -115,6 +115,16 @@ $font-2: "Helvetica";
   }
 }
 
+@keyframes show-tab {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
 @keyframes show-down {
   from {
     opacity: 0;
@@ -126,7 +136,7 @@ $font-2: "Helvetica";
   }
 }
 
-@keyframes show-down {
+@keyframes show-down-accordion {
   from {
     opacity: 0;
     max-height: 0;

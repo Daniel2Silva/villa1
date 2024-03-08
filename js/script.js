@@ -1,6 +1,6 @@
 import initTabNav from "./modules/tabnav.js";
 import initSlide from "./modules/slide.js";
-import initAccordion from "./modules/accordion.js";
+import initAcorrdion from "./modules/accordion.js";
 import initMenuMobile from "./modules/menuMobile.js";
 
 
@@ -8,6 +8,6 @@ import initMenuMobile from "./modules/menuMobile.js";
 
 
 initSlide();
+initAcorrdion()
 initMenuMobile();
-initAccordion()
 initTabNav();

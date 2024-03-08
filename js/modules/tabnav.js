@@ -1,7 +1,9 @@
 export default function initTabNav() {
     const tabBtn = document.querySelectorAll('[data-tab="btn"] li');
     const tabContent = document.querySelectorAll(".melhor-negocio-item");
-  
+
+
+    tabBtn[0].classList.add('ativo')
     tabContent[0].classList.add("ativo");
     function ativarTab(section) {
       tabBtn.forEach((btn) => {
