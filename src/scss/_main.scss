@@ -30,31 +30,55 @@
       }
     }
   }
-  .conteudo-home {
-    @include max-width;
-    @include flexbox(center, center);
-    flex-wrap: wrap;
-    .conteudo-home-itens {
-      @include d("m") {
-        flex-direction: column;
-        margin-left: 8px;
-      }
-      @include d("t") {
-        flex-direction: column;
-        margin-left: 8px;
-      }
-      @include displayFlex;
-      @include flexbox(start, center);
-      gap: 40px;
-      .accordion {
-        width: 460px;
-        @include d("m") {
-          width: 350px;
+}
+.conteudo-home {
+  @include max-width;
+  @include flexbox(center, center);
+  flex-wrap: wrap;
+  .conteudo-home-itens {
+    @include d("m") {
+      flex-direction: column;
+      margin-left: 8px;
+    }
+    @include d("t") {
+      flex-direction: column;
+      margin-left: 8px;
+    }
+    @include flexbox(start, center);
+    gap: 40px;
+    .accordion {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 50px;
+      .titulo-accordion {
+        span {
+          @include font-1(16);
+          font-weight: 900;
+          position: relative;
+          color: #ee626b;
+          padding-left: 10px;
+        }
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 3px;
+          height: 16px;
+          background-color: #ee626b;
+          position: absolute;
+        }
+        h2 {
+          padding-top: 20px;
+          @include font-1(48);
         }
       }
+      width: 460px;
+      @include d("m") {
+        width: 350px;
+      }
     }
-    margin-bottom: 80px;
   }
+  margin-bottom: 80px;
 }
 
 .section-video {
@@ -76,11 +100,26 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    .video-grid {
+    .titulo-video {
+      text-align: center;
+      padding: 100px 0;
+      span {
+        @include font-1(16);
+        font-weight: 900;
+        position: relative;
+        color: #ee626b;
+        padding-left: 10px;
+      }
+      &::before {
+        content: "";
+        display: inline-block;
+        width: 3px;
+        height: 16px;
+        background-color: #ee626b;
+        position: absolute;
+      }
       h3 {
         color: white;
-        text-align: center;
-        padding: 100px 0;
         @include font-1(48);
         font-weight: 800;
       }
@@ -102,6 +141,8 @@
     }
   }
 }
+
+
 
 .numeros {
   @include max-width;
@@ -158,6 +199,15 @@
 }
 
 .info-feature-itens {
+  h3 {
+    font-size: 1.5rem;
+    font-family: "roboto";
+  }
+  p {
+    @include tipo-2(16);
+    color: $cor-3;
+    padding: 5px 0;
+  }
   @include d("m") {
     width: 350px;
   }
@@ -172,16 +222,6 @@
   gap: 20px;
 }
 
-.accordion h2 {
-  font-size: 3rem;
-}
-.accordion {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 100px;
-}
-
 .accordion-feature {
   @include d("m") {
     width: 350px;
@@ -191,16 +231,19 @@
   background-color: #fafafa;
   border-radius: 12px;
   dt {
+    @include font-1(16);
     padding: 15px 0px;
-    font-size: 1.125rem;
-    font-weight: bold;
     &::after {
       margin-top: 10px;
       display: block;
       content: "";
       height: 0.5px;
-      background-color: $cor-3;
+      background-color: $cor-4;
     }
+  }
+  dd {
+    @include tipo-2(16);
+    line-height: 25px;
   }
 }
 
@@ -224,6 +267,11 @@
     margin-bottom: 60px;
     margin-left: 50px;
   }
+  @include d("t") {
+    margin-left: 35px;
+    margin-bottom: 60px;
+    width: max-content;
+  }
 }
 
 .fotoi {
@@ -237,97 +285,127 @@
   @include d("m") {
     top: 370px;
   }
-}
-
-.titulo-accordion span {
-  color: red;
+  @include d("t") {
+    top: 420px;
+  }
 }
 
 .section-melhor-negocio {
-  .info-melhor-negocio {
-    @include d("m") {
-      flex-direction: column;
-    }
-    @include d("t") {
-      flex-direction: column;
-    }
-    padding: 50px 0;
-    @include flexbox(center, space-between);
-    gap: 60px;
-    .lista-negocio {
-      @include displayFlex;
-      gap: 30px;
-      @include d("m") {
-        gap: 5px;
-      }
-      li {
-        cursor: pointer;
-        font-size: 1.125rem;
-        background-color: black;
-        font-weight: 600;
-        color: white;
-        padding: 15px 25px;
-        border-radius: 10px;
-        transition: 0.3s ease;
-        @include font-1(16);
-        @include d("m") {
-          font-size: 0.7rem;
+  background-color: #fafafa;
+  padding: 50px 0;
+  .container-negocio {
+    @include max-width;
+    .info-melhor-negocio {
+      .negocio-titulo {
+        span {
+          @include font-1(16);
+          font-weight: 900;
+          position: relative;
+          color: #ee626b;
+          padding-left: 10px;
+        }
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 3px;
+          height: 16px;
+          background-color: #ee626b;
+          position: absolute;
+        }
+        h1 {
+          padding-top: 10px;
+          @include font-1(48);
         }
       }
-      .ativo {
-        background-color: $cor-secundaria;
-      }
-    }
-  }
-  @include max-width;
-  .melhor-negocio-item {
-    margin-bottom: 200px;
-    .lista-info {
-      -webkit-box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.21);
-      -moz-box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.21);
-      box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.21);
-      border-radius: 12px;
-      padding: 25px 0;
-      width: 261px;
-      height: 350px;
-      @include flexbox(center, space-between);
-      flex-direction: column;
       @include d("m") {
-        width: 350px;
+        flex-direction: column;
       }
       @include d("t") {
+        flex-direction: column;
+      }
+      padding: 50px 0;
+      @include flexbox(end, space-between);
+      gap: 60px;
+      .lista-negocio {
+        @include displayFlex;
+        gap: 30px;
+        @include d("m") {
+          gap: 5px;
+        }
+        li {
+          @include btn
+        }
+        .ativo {
+          background-color: $cor-secundaria;
+        }
+      }
+    }
+    .melhor-negocio-item {
+      margin-bottom: 200px;
+      .lista-info {
+        background-color: #fafafa;
+        -webkit-box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.21);
+        -moz-box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.21);
+        box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.21);
+        border-radius: 12px;
+        padding: 25px 0;
+        width: 261px;
+        height: 350px;
+        @include flexbox(center, space-between);
+        flex-direction: column;
+        @include d("m") {
+          width: 350px;
+        }
+        @include d("t") {
+          width: 460px;
+        }
+      }
+      gap: 20px;
+      @include flexbox(flex-start, space-between);
+      @include d("m") {
+        flex-direction: column;
+        align-items: center;
+      }
+      @include d("t") {
+        flex-direction: column;
+        align-items: center;
+      }
+      .img-negocio {
         width: 460px;
+        @include d("m") {
+          width: 350px;
+        }
       }
-    }
-    gap: 20px;
-    @include flexbox(flex-start, space-between);
-    @include d("m") {
-      flex-direction: column;
-      align-items: center;
-    }
-    @include d("t") {
-      flex-direction: column;
-      align-items: center;
-    }
-    .img-negocio {
-      width: 460px;
-      @include d("m") {
-        width: 350px;
+      .negocio-texto {
+        h2 {
+          @include font-1(16);
+          letter-spacing: 1px;
+        }
+        p {
+          @include tipo-2(16);
+          line-height: 35px;
+          color: #5f5a56;
+        }
+        width: 261px;
+        height: 457px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        @include d("m") {
+          width: 350px;
+        }
       }
+      display: none;
+      animation: show-tab 0.6s forwards;
     }
-    .negocio-texto {
-      width: 261px;
-      height: 457px;
+    .ativo {
       display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      @include d("m") {
-        width: 350px;
-      }
     }
-    display: none;
-    animation: show-tab .6s forwards;
-  }.ativo{
-    display: flex;
   }
+}
+
+.calendar {
+  font-size: 1rem;
+  padding: 10px;
+  border-radius: 20px;
 }

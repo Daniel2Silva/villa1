@@ -4,10 +4,8 @@ import initAcorrdion from "./modules/accordion.js";
 import initMenuMobile from "./modules/menuMobile.js";
 
 
-
-
+const newTab = new initTabNav ("./modules/tabnav.js")
 
 initSlide();
 initAcorrdion()
 initMenuMobile();
-initTabNav();
