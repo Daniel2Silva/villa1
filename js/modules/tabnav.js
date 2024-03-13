@@ -26,32 +26,31 @@
 export default class tabNav {
   constructor() {
     this.tabBtn = document.querySelectorAll('[data-tab="btn"] li');
-    this.tabContent = document.querySelectorAll(".melhor-negocio-item");
-
-    this.init()
+    this.tabContent = document.querySelectorAll('.melhor-negocio-item');
   }
 
-  init(){
-    this.tabBtn[0].classList.add('ativo')
-    this.tabContent[0].classList.add('ativo')
+  initTab() {
     this.tabBtn.forEach((item, index) => {
       item.addEventListener('click', () => {
-        this.ativarTab(index)
-      })
-    })
+        this.ativarTab(index);
+      });
+    });
   }
 
+  init() {
+    this.initTab();
+    this.tabBtn[0].classList.add('ativo');
+    this.tabContent[0].classList.add('ativo');
+  }
 
-
-  ativarTab(section){
+  ativarTab(section) {
     this.tabBtn.forEach((btn) => {
-      btn.classList.remove('ativo')
-    })
+      btn.classList.remove('ativo');
+    });
     this.tabContent.forEach((content) => {
-      content.classList.remove('ativo')
-    })
-    this.tabBtn[section].classList.add('ativo')
-    this.tabContent[section].classList.add('ativo')
+      content.classList.remove('ativo');
+    });
+    this.tabBtn[section].classList.add('ativo');
+    this.tabContent[section].classList.add('ativo');
   }
-
 }

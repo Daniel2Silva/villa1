@@ -102,6 +102,8 @@ $font-2: "Helvetica";
   background-size: cover;
   background-position: center;
   height: 100vh;
+  max-height: 700px;
+  width: 100vw;
   h1 {
     @include font-1(16);
     color: $cor-primaria;

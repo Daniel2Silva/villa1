@@ -12,7 +12,7 @@
         @include slide(url(../src/img/banner-03.jpg));
       }
       .info-slide {
-        @include d("m") {
+        @include d('m') {
           padding-top: 200px;
           p {
             font-size: 3.125rem;
@@ -36,11 +36,11 @@
   @include flexbox(center, center);
   flex-wrap: wrap;
   .conteudo-home-itens {
-    @include d("m") {
+    @include d('m') {
       flex-direction: column;
       margin-left: 8px;
     }
-    @include d("t") {
+    @include d('t') {
       flex-direction: column;
       margin-left: 8px;
     }
@@ -60,7 +60,7 @@
           padding-left: 10px;
         }
         &::before {
-          content: "";
+          content: '';
           display: inline-block;
           width: 3px;
           height: 16px;
@@ -73,7 +73,7 @@
         }
       }
       width: 460px;
-      @include d("m") {
+      @include d('m') {
         width: 350px;
       }
     }
@@ -87,11 +87,12 @@
   background-position: center;
   background-size: cover;
   height: 100vh;
-  @include d("m") {
+  max-height: 700px;
+  @include d('m') {
     height: 650px;
     margin-bottom: 100px;
   }
-  @include d("t") {
+  @include d('t') {
     height: 650px;
     margin-bottom: 200px;
   }
@@ -111,7 +112,7 @@
         padding-left: 10px;
       }
       &::before {
-        content: "";
+        content: '';
         display: inline-block;
         width: 3px;
         height: 16px;
@@ -131,10 +132,10 @@
       img {
         border-radius: 12px;
       }
-      @include d("t") {
+      @include d('t') {
         width: 700px;
       }
-      @include d("m") {
+      @include d('m') {
         width: 350px;
         height: 200px;
       }
@@ -142,18 +143,16 @@
   }
 }
 
-
-
 .numeros {
   @include max-width;
   display: flex;
   align-items: center;
   justify-content: space-around;
   margin-bottom: 120px;
-  @include d("t") {
+  @include d('t') {
     flex-direction: column;
   }
-  @include d("m") {
+  @include d('m') {
     flex-direction: column;
   }
   gap: 20px;
@@ -171,12 +170,12 @@
     border-radius: 12px;
     .numero {
       font-size: 2.5rem;
-      font-family: "roboto";
+      font-family: 'roboto';
       color: $cor-secundaria;
       font-weight: 900;
     }
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       height: 50px;
       width: 50px;
@@ -201,17 +200,17 @@
 .info-feature-itens {
   h3 {
     font-size: 1.5rem;
-    font-family: "roboto";
+    font-family: 'roboto';
   }
   p {
     @include tipo-2(16);
     color: $cor-3;
     padding: 5px 0;
   }
-  @include d("m") {
+  @include d('m') {
     width: 350px;
   }
-  @include d("t") {
+  @include d('t') {
     width: 460px;
   }
   width: 260px;
@@ -223,7 +222,7 @@
 }
 
 .accordion-feature {
-  @include d("m") {
+  @include d('m') {
     width: 350px;
   }
   width: 450px;
@@ -236,7 +235,7 @@
     &::after {
       margin-top: 10px;
       display: block;
-      content: "";
+      content: '';
       height: 0.5px;
       background-color: $cor-4;
     }
@@ -263,11 +262,11 @@
 .img-accordion {
   position: relative;
   width: 300px;
-  @include d("m") {
+  @include d('m') {
     margin-bottom: 60px;
     margin-left: 50px;
   }
-  @include d("t") {
+  @include d('t') {
     margin-left: 35px;
     margin-bottom: 60px;
     width: max-content;
@@ -282,10 +281,10 @@
   background-color: $cor-secundaria;
   top: 350px;
   left: -40px;
-  @include d("m") {
+  @include d('m') {
     top: 370px;
   }
-  @include d("t") {
+  @include d('t') {
     top: 420px;
   }
 }
@@ -305,7 +304,7 @@
           padding-left: 10px;
         }
         &::before {
-          content: "";
+          content: '';
           display: inline-block;
           width: 3px;
           height: 16px;
@@ -317,10 +316,10 @@
           @include font-1(48);
         }
       }
-      @include d("m") {
+      @include d('m') {
         flex-direction: column;
       }
-      @include d("t") {
+      @include d('t') {
         flex-direction: column;
       }
       padding: 50px 0;
@@ -329,11 +328,11 @@
       .lista-negocio {
         @include displayFlex;
         gap: 30px;
-        @include d("m") {
+        @include d('m') {
           gap: 5px;
         }
         li {
-          @include btn
+          @include btn;
         }
         .ativo {
           background-color: $cor-secundaria;
@@ -353,26 +352,26 @@
         height: 350px;
         @include flexbox(center, space-between);
         flex-direction: column;
-        @include d("m") {
+        @include d('m') {
           width: 350px;
         }
-        @include d("t") {
+        @include d('t') {
           width: 460px;
         }
       }
       gap: 20px;
       @include flexbox(flex-start, space-between);
-      @include d("m") {
+      @include d('m') {
         flex-direction: column;
         align-items: center;
       }
-      @include d("t") {
+      @include d('t') {
         flex-direction: column;
         align-items: center;
       }
       .img-negocio {
         width: 460px;
-        @include d("m") {
+        @include d('m') {
           width: 350px;
         }
       }
@@ -391,7 +390,7 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        @include d("m") {
+        @include d('m') {
           width: 350px;
         }
       }
@@ -408,4 +407,86 @@
   font-size: 1rem;
   padding: 10px;
   border-radius: 20px;
+}
+
+.section-contato {
+  margin-bottom: 500px;
+  @include d('m'){
+    margin-bottom: 1100px;
+  }
+  background-image: url('../src/img/contact-bg.jpg');
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  max-height: 700px;
+  h4 {
+    font-size: 3rem;
+    text-align: center;
+    padding: 140px 0;
+  }
+  .contato-main-item {
+    @include max-width;
+    @include flexbox(start, space-between);
+    @include d('t') {
+      flex-direction: column;
+    }
+    @include d('m') {
+      flex-direction: column;
+    }
+    gap: 60px;
+    .mapa {
+      iframe {
+        width: 640px;
+        height: 500px;
+        border-radius: 12px;
+        @include d('m'){
+          width: 370px;
+        }
+      }
+    }
+    .info-contato {
+      @include d('t') {
+        flex-direction: column;
+      }
+      @include d('m') {
+        flex-direction: column;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 40px 0;
+      div {
+        display: flex;
+        width: 300px;
+        height: 100px;
+        align-items: center;
+        justify-content: center;
+        background-color: azure;
+        flex-direction: column;
+        border-radius: 12px;
+      }
+    }
+  }
+  form {
+    @include flexbox(start, center);
+    gap: 25px;
+    flex-direction: column;
+    background-color: #fafafa;
+    -webkit-box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.21);
+    -moz-box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.21);
+    box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.21);
+    border-radius: 12px;
+    padding: 30px 40px;
+    width: 421px;
+    height: 540px;
+    @include d('m'){
+      width: 360px;
+    }
+    input {
+      height: 40px;
+      width: 100%;
+      border-radius: 15px;
+      border: none;
+    }
+  }
 }
