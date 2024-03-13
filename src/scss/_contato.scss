@@ -21,11 +21,11 @@
 }
 
 .contato-page {
-  @include max-width;
   display: flex;
   flex-direction: column;
   align-items: center;
   .contato-main-item {
+    @include max-width;
     @include flexbox(start, space-between);
     @include d('t') {
       flex-direction: column;
@@ -34,13 +34,14 @@
     @include d('m') {
       flex-direction: column;
     }
-    gap: 60px;
+    gap: 200px;
     .mapa {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       height: 540px;
-      width: 520px;
+      width: 350px;
+      margin-bottom: 50px;
       .titulo-contato {
         span {
           @include font-1(16);
@@ -113,7 +114,7 @@
     border-radius: 12px;
     padding: 30px 40px;
     width: 500px;
-    height: 570px;
+    height: 600px;
     @include d('m') {
       width: 360px;
     }

@@ -1246,25 +1246,25 @@ footer {
 }
 
 .contato-page {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 60px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-@media only screen and (max-width: 767px) {
-  .contato-page {
-    padding: 0 20px;
-  }
-}
-
 .contato-page .contato-main-item {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 60px;
   display: flex;
   align-items: start;
   justify-content: space-between;
-  gap: 60px;
+  gap: 200px;
+}
+
+@media only screen and (max-width: 767px) {
+  .contato-page .contato-main-item {
+    padding: 0 20px;
+  }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -1285,7 +1285,8 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   height: 540px;
-  width: 520px;
+  width: 350px;
+  margin-bottom: 50px;
 }
 
 .contato-page .contato-main-item .mapa .titulo-contato span {
@@ -1376,7 +1377,7 @@ footer {
   border-radius: 12px;
   padding: 30px 40px;
   width: 500px;
-  height: 570px;
+  height: 600px;
 }
 
 @media only screen and (max-width: 767px) {
