@@ -60,13 +60,100 @@
         <button class="btn-mobile">btn</button>
       </section>
     </header>
-    <main class="propriedades">
+    <main class="contato">
       <section>
-        <div class="propriedades-banner">
-          <h1 class="mnr">HOME, PROPRIES</h1>
-          <p>PROPRIEDADES</p>
+        <div class="contato-banner">
+          <span class="mnr">HOME, PROPRIES</span>
+          <p>CONTATO</p>
         </div>
       </section>
+      <section class="contato-page">
+        <section class="contato-main-item">
+          <section class="mapa">
+            <div class="titulo-contato">
+              <span>CONTATO</span>
+              <h2>
+                Get In Touch <br />
+                With Our <br />
+                Agents
+              </h2>
+            </div>
+            <p class="texto-cntt">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit
+              incidunt sint officia tenetur eos quo quidem voluptates at sit!
+              Eius praesentium nulla tempore aspernatur sapiente, ut cupiditate
+              fugiat odit fuga.
+            </p>
+            <section class="info-contato">
+              <section>
+                <span class="material-symbols-outlined"> call </span>
+                <div>
+                  <p>010-0200340</p>
+                  <p>phone number</p>
+                </div>
+              </section>
+              <section>
+                <span class="material-symbols-outlined"> mail </span>
+
+                <div>
+                  <p>010-0200340</p>
+                  <p>phone number</p>
+                </div>
+              </section>
+            </section>
+          </section>
+          <form action="formulario" method="POST">
+            <label for="nome">Nome</label>
+            <input
+              type="text"
+              id="nome"
+              name="nome"
+              placeholder="Seu nome"
+              required
+            />
+
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Seu email"
+              required
+            />
+
+            <label for="objetivo">Objetivo</label>
+            <input
+              type="text"
+              id="objetivo"
+              name="objetivo"
+              placeholder="Objetivo"
+              required
+            />
+
+            <label for="mensagem">Mensagem</label>
+            <textarea
+              id="mensagem"
+              name="mensagem"
+              placeholder="Mensagem"
+              required
+              rows="6"
+              cols="40"
+            ></textarea>
+
+            <button type="submit">Enviar mensagem</button>
+          </form>
+        </section>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.183949017328!2d-73.98811752488476!3d40.75797873480101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes%20Square!5e0!3m2!1spt-BR!2sbr!4v1710274823682!5m2!1spt-BR!2sbr"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </section>
+      <footer>
+        <span>Tudo Posso Naquele Que Me Fortalece!</span>
+      </footer>
     </main>
   </body>
 </html>

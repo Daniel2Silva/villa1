@@ -27,6 +27,7 @@
   }
   .info-header-top {
     @include displayFlex;
+    gap: 10px;
     @include font-1(16);
     font-weight: 400;
     color: $cor-3;
@@ -35,6 +36,7 @@
     }
   }
   .redes-sociais {
+    gap: 20px;
     @include displayFlex;
     a {
       color: $cor-5;

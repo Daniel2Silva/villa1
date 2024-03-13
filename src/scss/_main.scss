@@ -318,9 +318,11 @@
       }
       @include d('m') {
         flex-direction: column;
+        align-items: center;
       }
       @include d('t') {
         flex-direction: column;
+        align-items: center;
       }
       padding: 50px 0;
       @include flexbox(end, space-between);
@@ -414,6 +416,9 @@
   @include d('m'){
     margin-bottom: 1100px;
   }
+  @include d('t'){
+    margin-bottom: 1100px;
+  }
   background-image: url('../src/img/contact-bg.jpg');
   background-position: center;
   background-size: cover;
@@ -429,6 +434,7 @@
     @include flexbox(start, space-between);
     @include d('t') {
       flex-direction: column;
+      align-items: center;
     }
     @include d('m') {
       flex-direction: column;
