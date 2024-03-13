@@ -22,6 +22,26 @@ $gap-150: 150px;
   display: flex;
 }
 
+
+//MIXINS BOTOES
+
+@mixin btn{
+  cursor: pointer;
+  font-size: 1.125rem;
+  background-color: black;
+  font-weight: 600;
+  color: white;
+  padding: 15px 25px;
+  border-radius: 10px;
+  transition: 0.3s ease;
+  @include font-1(16);
+  @include d("m") {
+    font-size: 0.7rem;
+  }
+}
+
+
+
 //MIXINS TIPOGRAFIA
 
 $font-1: "Roboto", sans-serif;
@@ -82,6 +102,8 @@ $font-2: "Helvetica";
   background-size: cover;
   background-position: center;
   height: 100vh;
+  max-height: 700px;
+  width: 100vw;
   h1 {
     @include font-1(16);
     color: $cor-primaria;
@@ -145,5 +167,18 @@ $font-2: "Helvetica";
   to {
     max-height: 150px;
     opacity: 1;
+  }
+}
+
+
+
+@keyframes show-up {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 60px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
   }
 }

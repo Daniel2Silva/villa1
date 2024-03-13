@@ -1,32 +1,78 @@
-[
-  {
-    "tipo": "luxo",
-    "preco": "354",
-    "endedereco": "rj"
-  },
-  {
-    "tipo": "app",
-    "preco": "3000",
-    "endedereco": "sp"
-  },
-  {
-    "tipo": "luxo",
-    "preco": "354",
-    "endedereco": "rj"
-  },
-  {
-    "tipo": "luxo",
-    "preco": "354",
-    "endedereco": "rj"
-  },
-  {
-    "tipo": "app",
-    "preco": "3000",
-    "endedereco": "sp"
-  },
-  {
-    "tipo": "luxo",
-    "preco": "354",
-    "endedereco": "rj"
-  }
-]
+{
+  "luxo": [
+    {
+      "img": "src='/src/img/banner-01.jpg'",
+      "tipo": "luxo",
+      "preco": 1.50000075,
+      "quartos": 4,
+      "area": 250,
+      "estacionamento": true,
+      "banheiro": 4
+    },
+    {
+      "img": "src='/src/img/banner-02.jpg'",
+      "tipo": "luxo",
+      "preco": 2.20000025,
+      "quartos": 5,
+      "area": 300,
+      "estacionamento": true,
+      "banheiro": 4
+    },
+    {
+      "img": "src='/src/img/banner-03.jpg'",
+      "tipo": "luxo",
+      "preco": 1.2000005,
+      "quartos": 3,
+      "area": 180,
+      "estacionamento": true,
+      "banheiro": 4
+    },
+    {
+      "img": "src='/src/img/banner-04.jpg'",
+      "tipo": "luxo",
+      "preco": 2.8000008,
+      "quartos": 6,
+      "area": 350,
+      "estacionamento": true,
+      "banheiro": 4
+    }
+  ],
+  "vila": [
+    {
+      "img": "src='/src/img/banner-01.jpg'",
+      "tipo": "villa",
+      "preco": 1.50000075,
+      "quartos": 4,
+      "area": 250,
+      "estacionamento": true,
+      "banheiro": 4
+    },
+    {
+      "img": "src='/src/img/banner-02.jpg'",
+      "tipo": "villa",
+      "preco": 2.20000025,
+      "quartos": 5,
+      "area": 300,
+      "estacionamento": true,
+      "banheiro": 4
+    },
+    {
+      "img": "src='/src/img/banner-03.jpg'",
+      "tipo": "villa",
+      "preco": 1.2000005,
+      "quartos": 3,
+      "area": 180,
+      "estacionamento": true,
+      "banheiro": 4
+    },
+    {
+      "img": "src='/src/img/banner-04.jpg'",
+      "tipo": "villa",
+      "preco": 2.8000008,
+      "quartos": 6,
+      "area": 350,
+      "estacionamento": true,
+      "banheiro": 4
+    }
+  ]
+}

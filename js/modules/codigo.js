@@ -1,4 +1,3 @@
-
 /*
 const tab = document.querySelectorAll(".btn-banner p");
 const tabContent = document.querySelectorAll(".tab-content");
@@ -17,7 +16,6 @@ tab.forEach((i, index) => {
   });
 }); 
 */
-
 
 /* const links = document.querySelectorAll(".menu a");
 
@@ -47,9 +45,7 @@ links.forEach((link) => {
 });
  */
 
-const numeros = document.querySelector(".numeros");
 
-console.log(numeros);
 /* async function mudarNumeros(n){
   const numero = await 
 } */

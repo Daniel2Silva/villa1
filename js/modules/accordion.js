@@ -1,39 +1,23 @@
-/* export default function initAccordion() {
-  const accordion = document.querySelectorAll("[data-accordion] dt");
-
-  accordion[0].classList.add('ativo')
-  accordion[0].nextElementSibling.classList.add('ativo')
-  function ativarAccordion() {
-    this.classList.toggle("ativo");
-    this.nextElementSibling.classList.toggle("ativo");
+export default class acorddion {
+  constructor(elementoSelecionado) {
+    this.elemento = document.querySelectorAll(elementoSelecionado);
   }
 
-  accordion.forEach((i) => {
-    i.addEventListener("click", ativarAccordion);
-  });
-}
- */
-
-export default function initAccordion() {
-  function $$(elementoSelecionado) {
-    const elemento = document.querySelectorAll(elementoSelecionado);
-
-    elemento[0].classList.add('ativo')
-    elemento[0].nextElementSibling.classList.add('ativo')
-    function ativarAcord() {
-      elemento.forEach((item) => {
-        item.addEventListener('click', () => {
-          item.classList.toggle('ativo')
-          item.nextElementSibling.classList.toggle('ativo')
-        })
-      })
-    }
-    return{
-      ativarAcord,
-    }
+  initAccordion(item) {
+    item.classList.toggle('ativo');
+    item.nextElementSibling.classList.toggle('ativo');
   }
-  
-  const accordion = $$('.accordion-feature dt')
-  
-  accordion.ativarAcord()
+
+  ativarAcord() {
+    this.elemento.forEach((item) => {
+      item.addEventListener('click', () => {
+        this.initAccordion(item);
+      });
+    });
+  }
+
+  init() {
+    this.ativarAcord();
+    this.initAccordion(this.elemento[0]);
+  }
 }
